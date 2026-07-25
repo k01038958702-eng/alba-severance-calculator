@@ -14,5 +14,11 @@ export default function sitemap() {
       changeFrequency: "yearly",
       priority: 0.3,
     },
+    {
+      url: "https://severance.richchoi.kr/contact",
+      lastModified: new Date(),
+      changeFrequency: "yearly",
+      priority: 0.3,
+    },
   ];
 }

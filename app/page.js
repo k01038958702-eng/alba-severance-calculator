@@ -193,7 +193,7 @@ export default function Home() {
       <footer>
         <p><strong>퇴직금 한번에</strong>은 예상 금액을 확인하기 위한 간편 계산기입니다.</p>
         <p>실제 지급액은 근무 형태, 평균임금 산정 기간, 수당 등에 따라 달라질 수 있어요.</p>
-        <p className="footerLinks"><a href="/privacy">개인정보처리방침</a></p>
+        <p className="footerLinks"><a href="/privacy">개인정보처리방침</a><span>·</span><a href="/contact">문의하기</a></p>
         <p className="copyright">© 2026 퇴직금 한번에 · 입력 정보 저장 안 함</p>
       </footer>
     </main>
