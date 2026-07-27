@@ -105,14 +105,14 @@ export default function Home() {
       <header className="topbar">
         <a className="brand" href="#" aria-label="알바 퇴직금 계산기 홈">
           <span className="brandMark">₩</span>
-          <span>퇴직금<span className="brandLight">한번에</span></span>
+          <span>알바퇴직금<span className="brandLight">계산하기</span></span>
         </a>
         <span className="privacy"><span className="lock">●</span> 입력 정보는 저장하지 않아요</span>
       </header>
 
       <section className="hero">
         <div className="eyebrow"><span>30초</span>면 충분해요</div>
-        <h1>내 알바 퇴직금,<br /><em>얼마 받을 수 있을까?</em></h1>
+        <h1>알바퇴직금계산기</h1>
         <p>로그인도, 회원가입도 필요 없어요.<br />근무 정보만 입력하면 바로 알려드릴게요.</p>
       </section>
 
@@ -191,10 +191,10 @@ export default function Home() {
       </section>
 
       <footer>
-        <p><strong>퇴직금 한번에</strong>은 예상 금액을 확인하기 위한 간편 계산기입니다.</p>
+        <p><strong>알바퇴직금계산하기</strong>는 예상 금액을 확인하기 위한 간편 계산기입니다.</p>
         <p>실제 지급액은 근무 형태, 평균임금 산정 기간, 수당 등에 따라 달라질 수 있어요.</p>
         <p className="footerLinks"><a href="/privacy">개인정보처리방침</a><span>·</span><a href="/contact">문의하기</a></p>
-        <p className="copyright">© 2026 퇴직금 한번에 · 입력 정보 저장 안 함</p>
+        <p className="copyright">© 2026 알바퇴직금계산하기 · 입력 정보 저장 안 함</p>
       </footer>
     </main>
   );
