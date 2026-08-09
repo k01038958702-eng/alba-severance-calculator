@@ -116,3 +116,73 @@ footer strong { color:#dfe4df; }
   .infoGrid article { border-right:0; border-bottom:1px solid #d9d6cd; }
   .infoGrid article:last-child { border-bottom:0; }
 }
+
+.shareSection {
+  width: min(760px, calc(100% - 32px));
+  margin: 0 auto 80px;
+  padding: 42px 32px;
+  border: 1px solid var(--line);
+  background: #fff;
+  text-align: center;
+}
+
+.shareEyebrow {
+  color: var(--green);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.shareSection h2 {
+  margin: 8px 0 10px;
+  font-size: 25px;
+  letter-spacing: -1.3px;
+}
+
+.shareSection > p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.shareActions {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.shareButton {
+  padding: 14px 20px;
+  border: 1px solid var(--green);
+  border-radius: 3px;
+  background: var(--green);
+  color: #fff;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.shareButtonSecondary {
+  background: #fff;
+  color: var(--green);
+}
+
+.shareNotice {
+  margin-top: 14px !important;
+  color: var(--green) !important;
+  font-size: 12px !important;
+  font-weight: 700;
+}
+
+@media (max-width: 650px) {
+  .shareSection {
+    padding: 34px 22px;
+  }
+
+  .shareActions {
+    flex-direction: column;
+  }
+
+  .shareButton {
+    width: 100%;
+  }
+}
