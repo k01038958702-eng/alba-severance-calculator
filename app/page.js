@@ -719,8 +719,7 @@ export default function Home() {
           </article>
         </div>
       </section>
-
-      <div className="floatingShare">
+                <div className="floatingShare">
   {shareOpen && (
     <div className="floatingShareMenu">
       <p className="floatingShareTitle">
