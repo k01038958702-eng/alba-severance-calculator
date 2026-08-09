@@ -53,7 +53,9 @@ function dateDiff(start, end) {
 
 function parseNumber(value) {
   return (
-    Number(String(value).replace(/[^0-9.]/g, "")) || 0
+    Number(
+      String(value).replace(/[^0-9.]/g, ""),
+    ) || 0
   );
 }
 
@@ -70,14 +72,13 @@ export default function Home() {
 
   const [startDate, setStartDate] = useState("");
   const [endDate, setEndDate] = useState(today);
-  const [weeklyHours, setWeeklyHours] = useState("20");
-
+  const [weeklyHours, setWeeklyHours] =
+    useState("20");
   const [wages, setWages] = useState([
     "",
     "",
     "",
   ]);
-
   const [bonus, setBonus] = useState("");
   const [annualLeavePay, setAnnualLeavePay] =
     useState("");
@@ -173,7 +174,6 @@ export default function Home() {
 
   function calculate(event) {
     event.preventDefault();
-
     setSubmitted(true);
 
     requestAnimationFrame(() => {
@@ -202,6 +202,14 @@ export default function Home() {
     });
   }
 
+  function showShareNotice(message) {
+    setShareNotice(message);
+
+    window.setTimeout(() => {
+      setShareNotice("");
+    }, 2500);
+  }
+
   async function copyShareLink() {
     const url = window.location.href;
 
@@ -222,9 +230,11 @@ export default function Home() {
         textarea.remove();
       }
 
-      setShareNotice("링크가 복사되었습니다.");
+      showShareNotice(
+        "링크가 복사되었습니다.",
+      );
     } catch {
-      setShareNotice(
+      showShareNotice(
         "링크를 복사하지 못했습니다.",
       );
     }
@@ -241,7 +251,7 @@ export default function Home() {
       if (navigator.share) {
         await navigator.share(shareData);
 
-        setShareNotice(
+        showShareNotice(
           "공유가 완료되었습니다.",
         );
       } else {
@@ -249,7 +259,7 @@ export default function Home() {
       }
     } catch (error) {
       if (error?.name !== "AbortError") {
-        setShareNotice(
+        showShareNotice(
           "공유하지 못했습니다. 다시 시도해 주세요.",
         );
       }
@@ -275,11 +285,31 @@ export default function Home() {
           </span>
         </a>
 
-        <span className="privacy">
-          <span className="lock">●</span>
-          입력 정보는 저장하지 않아요
-        </span>
+        <div className="topActions">
+          <span className="privacy">
+            <span className="lock">●</span>
+            입력 정보는 저장하지 않아요
+          </span>
+
+          <button
+            className="headerShareButton"
+            type="button"
+            onClick={shareSite}
+          >
+            <span>↗</span>
+            공유
+          </button>
+        </div>
       </header>
+
+      {shareNotice && (
+        <div
+          className="shareToast"
+          role="status"
+        >
+          {shareNotice}
+        </div>
+      )}
 
       <section className="hero">
         <div className="eyebrow">
@@ -688,6 +718,7 @@ export default function Home() {
         <div className="infoGrid">
           <article>
             <span>01</span>
+
             <h3>1년 이상 근무</h3>
 
             <p>
@@ -698,6 +729,7 @@ export default function Home() {
 
           <article>
             <span>02</span>
+
             <h3>주 15시간 이상</h3>
 
             <p>
@@ -709,6 +741,7 @@ export default function Home() {
 
           <article>
             <span>03</span>
+
             <h3>퇴사 후 14일 이내</h3>
 
             <p>
@@ -719,52 +752,6 @@ export default function Home() {
           </article>
         </div>
       </section>
-                <div className="floatingShare">
-  {shareOpen && (
-    <div className="floatingShareMenu">
-      <p className="floatingShareTitle">
-        친구에게 공유하기
-      </p>
-
-      <button
-        type="button"
-        onClick={shareSite}
-      >
-        <span>↗</span>
-        SNS로 공유
-      </button>
-
-      <button
-        type="button"
-        onClick={copyShareLink}
-      >
-        <span>⧉</span>
-        링크 복사
-      </button>
-
-      {shareNotice && (
-        <p
-          className="floatingShareNotice"
-          role="status"
-        >
-          {shareNotice}
-        </p>
-      )}
-    </div>
-  )}
-
-  <button
-    className="floatingShareToggle"
-    type="button"
-    aria-label="공유 메뉴 열기"
-    aria-expanded={shareOpen}
-    onClick={() =>
-      setShareOpen((current) => !current)
-    }
-  >
-    {shareOpen ? "×" : "↗"}
-  </button>
-</div>
 
       <footer>
         <p>
