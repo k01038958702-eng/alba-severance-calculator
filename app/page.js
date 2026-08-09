@@ -720,50 +720,52 @@ export default function Home() {
         </div>
       </section>
 
-      <section
-        className="shareSection"
-        aria-labelledby="shareTitle"
+      <div className="floatingShare">
+  {shareOpen && (
+    <div className="floatingShareMenu">
+      <p className="floatingShareTitle">
+        친구에게 공유하기
+      </p>
+
+      <button
+        type="button"
+        onClick={shareSite}
       >
-        <span className="shareEyebrow">
-          함께 알려주세요
-        </span>
+        <span>↗</span>
+        SNS로 공유
+      </button>
 
-        <h2 id="shareTitle">
-          알바 친구에게 공유하기
-        </h2>
+      <button
+        type="button"
+        onClick={copyShareLink}
+      >
+        <span>⧉</span>
+        링크 복사
+      </button>
 
-        <p>
-          퇴직금이 궁금한 친구에게 무료
-          계산기를 공유해 주세요.
+      {shareNotice && (
+        <p
+          className="floatingShareNotice"
+          role="status"
+        >
+          {shareNotice}
         </p>
+      )}
+    </div>
+  )}
 
-        <div className="shareActions">
-          <button
-            className="shareButton"
-            type="button"
-            onClick={shareSite}
-          >
-            SNS로 공유하기
-          </button>
-
-          <button
-            className="shareButton shareButtonSecondary"
-            type="button"
-            onClick={copyShareLink}
-          >
-            링크 복사
-          </button>
-        </div>
-
-        {shareNotice && (
-          <p
-            className="shareNotice"
-            role="status"
-          >
-            {shareNotice}
-          </p>
-        )}
-      </section>
+  <button
+    className="floatingShareToggle"
+    type="button"
+    aria-label="공유 메뉴 열기"
+    aria-expanded={shareOpen}
+    onClick={() =>
+      setShareOpen((current) => !current)
+    }
+  >
+    {shareOpen ? "×" : "↗"}
+  </button>
+</div>
 
       <footer>
         <p>
