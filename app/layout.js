@@ -87,12 +87,12 @@ export default function RootLayout({ children }) {
     "@type": "WebSite",
     name: siteName,
     alternateName: [
-      "알바퇴직금계산기",
-      "무료 퇴직금 계산기",
-      "아르바이트 퇴직금 계산기",
+      "알바 퇴직금 계산기",
+      "무료 알바 퇴직금 계산기",
     ],
-    url: siteUrl,
-    description: searchDescription,
+    url: `${siteUrl}/`,
+    description:
+      "로그인 없이 무료로 아르바이트 퇴직금을 계산하는 서비스입니다.",
     inLanguage: "ko-KR",
   };
 
