@@ -292,13 +292,23 @@ export default function Home() {
           </span>
 
           <button
-            className="headerShareButton"
-            type="button"
-            onClick={shareSite}
-          >
-            <span>↗</span>
-            공유
-          </button>
+  className="headerShareButton"
+  type="button"
+  aria-label="사이트 공유하기"
+  title="공유하기"
+  onClick={shareSite}
+>
+  <svg
+    viewBox="0 0 24 24"
+    aria-hidden="true"
+  >
+    <circle cx="18" cy="5" r="2.5" />
+    <circle cx="6" cy="12" r="2.5" />
+    <circle cx="18" cy="19" r="2.5" />
+    <path d="M8.2 10.8 15.8 6.2" />
+    <path d="m8.2 13.2 7.6 4.6" />
+  </svg>
+</button>
         </div>
       </header>
 
