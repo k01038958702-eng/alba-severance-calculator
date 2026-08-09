@@ -117,72 +117,110 @@ footer strong { color:#dfe4df; }
   .infoGrid article:last-child { border-bottom:0; }
 }
 
-.shareSection {
-  width: min(760px, calc(100% - 32px));
-  margin: 0 auto 80px;
-  padding: 42px 32px;
-  border: 1px solid var(--line);
-  background: #fff;
-  text-align: center;
-}
-
-.shareEyebrow {
-  color: var(--green);
-  font-size: 13px;
-  font-weight: 800;
-}
-
-.shareSection h2 {
-  margin: 8px 0 10px;
-  font-size: 25px;
-  letter-spacing: -1.3px;
-}
-
-.shareSection > p {
-  margin: 0;
-  color: var(--muted);
-  font-size: 14px;
-}
-
-.shareActions {
+.floatingShare {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 100;
   display: flex;
-  justify-content: center;
-  gap: 10px;
-  margin-top: 24px;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 12px;
 }
 
-.shareButton {
-  padding: 14px 20px;
-  border: 1px solid var(--green);
-  border-radius: 3px;
+.floatingShareToggle {
+  display: grid;
+  place-items: center;
+  width: 54px;
+  height: 54px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
   background: var(--green);
   color: #fff;
+  font-size: 23px;
   font-weight: 800;
+  box-shadow: 0 10px 28px rgba(23, 79, 60, 0.28);
+  cursor: pointer;
+  transition:
+    transform 0.2s,
+    background 0.2s;
+}
+
+.floatingShareToggle:hover {
+  background: #0d3e2d;
+  transform: translateY(-2px);
+}
+
+.floatingShareMenu {
+  width: 210px;
+  padding: 18px;
+  border: 1px solid #dedbd2;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 16px 45px rgba(30, 36, 31, 0.18);
+}
+
+.floatingShareTitle {
+  margin: 0 0 12px;
+  color: var(--ink);
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.floatingShareMenu button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  margin-top: 8px;
+  padding: 11px 12px;
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  background: var(--paper);
+  color: var(--ink);
+  font-size: 13px;
+  font-weight: 700;
+  text-align: left;
   cursor: pointer;
 }
 
-.shareButtonSecondary {
-  background: #fff;
-  color: var(--green);
+.floatingShareMenu button:hover {
+  border-color: var(--green);
+  background: #f1f7ed;
 }
 
-.shareNotice {
-  margin-top: 14px !important;
-  color: var(--green) !important;
-  font-size: 12px !important;
+.floatingShareMenu button span {
+  display: grid;
+  place-items: center;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: var(--green);
+  color: #fff;
+  font-size: 12px;
+}
+
+.floatingShareNotice {
+  margin: 12px 0 0;
+  color: var(--green);
+  font-size: 11px;
   font-weight: 700;
+  line-height: 1.5;
 }
 
 @media (max-width: 650px) {
-  .shareSection {
-    padding: 34px 22px;
+  .floatingShare {
+    right: 16px;
+    bottom: 16px;
   }
 
-  .shareActions {
-    flex-direction: column;
+  .floatingShareToggle {
+    width: 50px;
+    height: 50px;
   }
 
-  .shareButton {
-    width: 100%;
+  .floatingShareMenu {
+    width: 200px;
   }
 }
