@@ -61,7 +61,18 @@ export default function PrivacyPage() {
         </section>
 
         <section>
-          <h2>6. 방침의 변경</h2>
+          <h2>6. 문의 연락처</h2>
+          <p>
+            개인정보 처리와 관련된 문의는{" "}
+            <a href="mailto:richchoicontact@gmail.com">
+              richchoicontact@gmail.com
+            </a>
+            으로 접수할 수 있습니다.
+          </p>
+        </section>
+
+        <section>
+          <h2>7. 방침의 변경</h2>
           <p>
             개인정보 처리 내용이 변경되는 경우 이 페이지에 변경 사항과 시행일을
             게시합니다.

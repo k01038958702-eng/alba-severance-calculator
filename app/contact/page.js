@@ -27,16 +27,14 @@ export default function ContactPage() {
         <div className="contactBox">
           <h2>오류 및 개선 의견 접수</h2>
           <p>
-            아래 공개 문의 게시판에서 새 문의를 작성할 수 있습니다. 문의 내용은
-            공개될 수 있으므로 개인정보나 급여 명세서 원본을 올리지 마세요.
+            아래 이메일로 문의 내용을 보내주세요. 개인정보나 급여 명세서 원본은
+            첨부하지 마세요.
           </p>
           <a
             className="contactButton"
-            href="https://github.com/k01038958702-eng/alba-severance-calculator/issues/new"
-            target="_blank"
-            rel="noreferrer"
+            href="mailto:richchoicontact@gmail.com"
           >
-            문의 작성하기
+            richchoicontact@gmail.com
           </a>
         </div>
       </article>

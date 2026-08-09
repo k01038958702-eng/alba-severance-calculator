@@ -81,8 +81,12 @@ export default function TermsPage() {
         <section>
           <h2>제8조 문의</h2>
           <p>
-            서비스 이용과 관련된 문의, 오류 신고 및 개선 의견은 문의하기
-            페이지를 통해 접수할 수 있습니다.
+            서비스 이용과 관련된 문의, 오류 신고 및 개선 의견은 문의하기 페이지
+            또는{" "}
+            <a href="mailto:richchoicontact@gmail.com">
+              richchoicontact@gmail.com
+            </a>
+            으로 접수할 수 있습니다.
           </p>
         </section>
       </article>
