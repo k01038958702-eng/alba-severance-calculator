@@ -291,17 +291,14 @@ export default function Home() {
             입력 정보는 저장하지 않아요
           </span>
 
-          <button
+         <button
   className="headerShareButton"
   type="button"
   aria-label="사이트 공유하기"
   title="공유하기"
   onClick={shareSite}
 >
-  <svg
-    viewBox="0 0 24 24"
-    aria-hidden="true"
-  >
+  <svg viewBox="0 0 24 24" aria-hidden="true">
     <circle cx="18" cy="5" r="2.5" />
     <circle cx="6" cy="12" r="2.5" />
     <circle cx="18" cy="19" r="2.5" />
