@@ -9,6 +9,18 @@ export default function sitemap() {
       priority: 1,
     },
     {
+      url: "https://severance.richchoi.kr/about",
+      lastModified: new Date(),
+      changeFrequency: "yearly",
+      priority: 0.4,
+    },
+    {
+      url: "https://severance.richchoi.kr/terms",
+      lastModified: new Date(),
+      changeFrequency: "yearly",
+      priority: 0.3,
+    },
+    {
       url: "https://severance.richchoi.kr/privacy",
       lastModified: new Date(),
       changeFrequency: "yearly",
