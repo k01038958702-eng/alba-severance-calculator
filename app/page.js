@@ -190,12 +190,31 @@ export default function Home() {
         </div>
       </section>
 
-      <footer>
-        <p><strong>알바 퇴직금 계산하기</strong>는 예상 금액을 확인하기 위한 간편 계산기입니다.</p>
-        <p>실제 지급액은 근무 형태, 평균임금 산정 기간, 수당 등에 따라 달라질 수 있어요.</p>
-        <p className="footerLinks"><a href="/privacy">개인정보처리방침</a><span>·</span><a href="/contact">문의하기</a></p>
-        <p className="copyright">© 2026 알바 퇴직금 계산하기 · 입력 정보 저장 안 함</p>
-      </footer>
+     <footer>
+  <p>
+    <strong>알바 퇴직금 계산하기</strong>는 예상 금액을 확인하기 위한
+    간편 계산기입니다.
+  </p>
+
+  <p>
+    실제 지급액은 근무 형태, 평균임금 산정 기간, 수당 등에 따라 달라질 수
+    있어요.
+  </p>
+
+  <p className="footerLinks">
+    <a href="/about">사이트 소개</a>
+    <span>·</span>
+    <a href="/terms">이용약관</a>
+    <span>·</span>
+    <a href="/privacy">개인정보처리방침</a>
+    <span>·</span>
+    <a href="/contact">문의하기</a>
+  </p>
+
+  <p className="copyright">
+    © 2026 알바 퇴직금 계산하기 · 입력 정보 저장 안 함
+  </p>
+</footer>
     </main>
   );
 }
